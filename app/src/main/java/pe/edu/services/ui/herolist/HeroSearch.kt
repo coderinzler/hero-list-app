@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -18,6 +19,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import data.model.Hero
 import data.repository.HeroRepository
+import utils.Result
 
 
 @Composable
@@ -64,6 +66,7 @@ fun Search(textQuery: MutableState<String>, heroes: MutableState<List<Hero>>) {
 
 
             }
-        )
+        ),
+        label = {Text("Search a hero")}
     )
 }
